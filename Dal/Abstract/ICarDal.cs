@@ -9,7 +9,8 @@ namespace Dal.Abstract
     {
         Car GetById();
         List<Car> GetAll();
-        bool Add(Car car);
+ 
+        void Add(Car car);
         void Update(Car car);
         void Delete(Car car);
     }

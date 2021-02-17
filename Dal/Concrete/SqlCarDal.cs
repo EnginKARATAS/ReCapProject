@@ -8,7 +8,7 @@ namespace Dal.Concrete
 {
     public class SqlCarDal : ICarDal
     {
-        public bool Add(Car car)
+        public void Add(Car car)
         {
             throw new NotImplementedException();
         }

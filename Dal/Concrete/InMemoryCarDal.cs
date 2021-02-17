@@ -8,6 +8,7 @@ namespace Dal.Concrete
 {
     public class InMemoryCarDal : ICarDal
     {
+        Car car1;
         List<Car> _cars;
 
         public InMemoryCarDal()
@@ -22,14 +23,23 @@ namespace Dal.Concrete
             };
         }
 
-        public bool Add(Car car)
+        public void Add(Car car)
         {
-            throw new NotImplementedException();
+            _cars.Add(car);
         }
 
         public void Delete(Car car)
         {
-            throw new NotImplementedException();
+            foreach (var item in _cars)
+            {
+                if (item.Id == car.Id)
+                {
+                    car1 = new Car();
+                    car1 = item;
+                }
+                    _cars.Remove(car1);
+            }
+
         }
 
         public List<Car> GetAll()

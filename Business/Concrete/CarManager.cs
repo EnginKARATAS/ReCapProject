@@ -13,9 +13,9 @@ namespace Business.Concrete
         {
             _IcarDal = carDal;
         }
-        public bool Add(Entities.Car car)
+        public void Add(Entities.Car car)
         {
-            throw new NotImplementedException();
+            _IcarDal.Add(car);
         }
 
         public void Delete(Entities.Car car)
