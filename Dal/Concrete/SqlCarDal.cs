@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Dal.Concrete
 {
-    public class SqlManager : ICarDal
+    public class SqlCarDal : ICarDal
     {
         public bool Add(Car car)
         {

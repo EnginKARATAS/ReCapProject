@@ -20,7 +20,7 @@ namespace Business.Concrete
 
         public void Delete(Entities.Car car)
         {
-            throw new NotImplementedException();
+            _IcarDal.Delete(car);
         }
 
         public List<Entities.Car> GetAll()

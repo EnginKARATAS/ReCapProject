@@ -11,14 +11,14 @@ namespace Console
 	{
 		static void Main(string[] args)
 		{
+			ICarDal memoryCarDal = new InMemoryCarDal();
+			ICarDal sqlCarDal = new SqlCarDal();
+			Car car1 = new Car { Description = "hell yea" };
 
-			CarManager carManager = new CarManager(new InMemoryCarDal());
-			carManager.GetAll();	
-			
-
-		
-
-          
+			CarManager carManager = new CarManager(memoryCarDal);
+			carManager.GetAll();
+			carManager.Add(car1);
+			carManager.Delete(car1);
 
 		}
 
